@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pregunta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: beige;
+        }
+    </style>
+</head>
+<body class="row align-items-center vh-100 text-center">
+
+    <div class="container-fluid">
+        
+        <div class="pregunta">
+            <!-- Aquí abajo puedes cambiar la pregunta -->
+            <h1 class="fw-bold">Quieres ser mi novia?❤</h1>
+        </div>
+
+        <div class="foto">
+            <!-- Aquí puedes cambiar la imagen -->
+            <img src="imagen.jpg" class="rounded w-25 p-2" alt="Fotito">
+        </div>
+        
+        <div class="respuestas">
+            <!-- Aquí puedes cambiar las respuestas -->
+           
+            <a style="width: 4rem; left: 40%;"class="btn btn-primary btn-lg fw-bold position-fixed" id="negativo" href="#" role="button">No</a>
+            <a style="width: 4rem; right:40%;"class="btn btn-primary btn-lg fw-bold position-fixed" id="positivo" href="#" role="button">Si</a>
+        </div>
+
+        
+    </div>    
+    
+    <!-- Aquí está el funcionamiento para que cuando presionas la opción de "No" se mueva el botón y cuando presiones el botón de "Si" aparezca una alerta -->
+    <script >
+        let respuestaSi=document.getElementById('positivo')
+        respuestaSi.addEventListener("click",function(e){
+            alert("Sabía que dirías que si ❤");
+        })
+        let respuestaNo=document.getElementById('negativo')
+        respuestaNo.addEventListener("mousemove",function(e){
+            let x = Math.round(Math.random()*93);
+            let y = Math.round(Math.random()*93);
+            respuestaNo.style.left = x+"%";
+            respuestaNo.style.top = y+"%";
+})
+    </script> 
+</body>
+</html>
